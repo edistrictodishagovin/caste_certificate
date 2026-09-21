@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Photo Download</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f2f2f2;text-align:center;padding:25px}
+.card{max-width:520px;margin:auto;background:#fff;padding:20px;border-radius:14px}
+img{max-width:100%;max-height:75vh;border-radius:8px}
+p{color:#555}
+</style>
+</head>
+<body>
+<div class="card">
+  <img src="photo.jpg" alt="Photo">
+  <p>Photo download will start automatically.</p>
+  <a id="download" href="photo.jpg" download="my-photo.jpg">Download Photo</a>
+</div>
+<script>
+window.addEventListener("load", function () {
+  // Browsers may block automatic downloads. If blocked, the visible link can be tapped.
+  setTimeout(function () {
+    document.getElementById("download").click();
+  }, 500);
+});
+</script>
+</body>
+</html>
